@@ -2,9 +2,9 @@
   "name": "nodejs-init-chat-number-whatsapp",
   "version": "1.0.0",
   "description": "Inicializador de conversas pelo whatsapp, selecionando o navegador.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/pedromesmer/nodejs-init-chat-number-whatsapp/issues"
   },
-  "homepage": "https://github.com/pedromesmer/nodejs-init-chat-number-whatsapp#readme"
+  "homepage": "https://github.com/pedromesmer/nodejs-init-chat-number-whatsapp#readme",
+  "devDependencies": {
+    "electron": "^9.1.2"
+  }
 }
