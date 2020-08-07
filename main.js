@@ -16,6 +16,7 @@ function createWindow () {
 
 app.whenReady().then(createWindow)
 // link: https://api.whatsapp.com/send?phone=seunumerodetelefone&text=sua%20mensagem
+// https://web.whatsapp.com/send?1=pt_br&phone=55849999416129
 
 
 function configNumber(element) {
@@ -25,7 +26,14 @@ function configNumber(element) {
     element.value = number
 }
 
-function send(number, text, navigator) {
-    console.log('vai dar certo')
+function send(navigator) {
+    const ddd = document.getElementById('ddd').options[document.getElementById('ddd').selectedIndex].value
+    const phone = document.getElementById('phone').value
+    const text = document.getElementById('msg').value
+    console.log(navigator, ddd, phone, text)
+
+    open(`https://web.whatsapp.com/send?phone=55${ddd}${phone}&text=${text}`,{
+        app: navigator
+    })
 }
 

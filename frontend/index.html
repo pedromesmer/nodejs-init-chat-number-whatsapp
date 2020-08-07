@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf8">
+        <meta charset="UTF-8">
         <title>Pagina inicial</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         
@@ -12,22 +13,23 @@
                 <option value="84">84</option>
                 <option value="">-----</option>
                 <script>
+                    //adicionando DDDs dinamicamente
                     const sel = document.getElementById('ddd')
                     let ddd = []
                     for (let i = 11; i < 100; i++) {
-                        ddd.push(i)
+                        ddd.push(i) // adicionados ao array
                     }
-                    ddd.forEach( (opt) => {
-                        option = new Option(opt, opt, (opt==84))
+                    ddd.forEach( (opt) => { // varre todos os itens do ddd
+                        option = new Option(opt, opt, (opt==84)) // value, text, selected
                         sel.options[sel.options.length] = option
                     })
                 </script>
             </select>
-            <input type="text" name="tel" onblur="configNumber(this)" required>
+            <input type="text" name="phone" id="phone" onblur="configNumber(this)" required>
             <br>
-            <textarea name="text"  cols="20" rows="10"></textarea>
-            <input type="button" name="whatsapp" value="whatsapp">
-            <input type="button" name="telegram" value="telegram">
+            <textarea name="text" id="msg" cols="20" rows="10"></textarea>
+            <input type="button" name="chrome" value="Google Chrome" onclick="send(this.name)">
+            <input type="button" name="firefox" value="Mozila Firefox" onclick="send(this.name)">
         </form>
 
         <script src="../main.js"></script>
