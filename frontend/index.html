@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Pagina inicial</title>
+    </head>
+    <body>
+        
+        <form>
+            <select name="DDD" id="ddd">
+                <!-- 11 ~~ 99 <option value="84">84</option> -->
+                <option value="84">84</option>
+                <option value="">-----</option>
+                <script>
+                    const sel = document.getElementById('ddd')
+                    let ddd = []
+                    for (let i = 11; i < 100; i++) {
+                        ddd.push(i)
+                    }
+                    ddd.forEach( (opt) => {
+                        option = new Option(opt, opt, (opt==84))
+                        sel.options[sel.options.length] = option
+                    })
+                </script>
+            </select>
+            <input type="text" name="tel" onblur="configNumber(this)" required>
+            <br>
+            <textarea name="text"  cols="20" rows="10"></textarea>
+            <input type="button" name="whatsapp" value="whatsapp">
+            <input type="button" name="telegram" value="telegram">
+        </form>
+
+        <script src="../main.js"></script>
+    </body>
+</html>

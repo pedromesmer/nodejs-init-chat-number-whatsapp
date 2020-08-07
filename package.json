@@ -25,5 +25,8 @@
   "homepage": "https://github.com/pedromesmer/nodejs-init-chat-number-whatsapp#readme",
   "devDependencies": {
     "electron": "^9.1.2"
+  },
+  "dependencies": {
+    "open": "^7.1.0"
   }
 }
