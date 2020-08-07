@@ -10,7 +10,7 @@ function createWindow () {
             nodeIntegration: true
         }
     })
-
+    win.setMenuBarVisibility(false)
     win.loadFile('frontend/index.html')
 }
 
@@ -18,6 +18,13 @@ app.whenReady().then(createWindow)
 // link: https://api.whatsapp.com/send?phone=seunumerodetelefone&text=sua%20mensagem
 // https://web.whatsapp.com/send?1=pt_br&phone=55849999416129
 
+function enter() {
+    var tecla = window.event.keyCode;
+    if (tecla==13) {
+        event.keyCode = 0; 
+        event.returnValue = false;
+    }
+}
 
 function configNumber(element) {
     number = element.value

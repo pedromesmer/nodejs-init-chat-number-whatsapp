@@ -5,31 +5,40 @@
         <title>Pagina inicial</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onKeyDown="enter()">
         
-        <form>
-            <select name="DDD" id="ddd">
-                <!-- 11 ~~ 99 <option value="84">84</option> -->
-                <option value="84">84</option>
-                <option value="">-----</option>
-                <script>
-                    //adicionando DDDs dinamicamente
-                    const sel = document.getElementById('ddd')
-                    let ddd = []
-                    for (let i = 11; i < 100; i++) {
-                        ddd.push(i) // adicionados ao array
-                    }
-                    ddd.forEach( (opt) => { // varre todos os itens do ddd
-                        option = new Option(opt, opt, (opt==84)) // value, text, selected
-                        sel.options[sel.options.length] = option
-                    })
-                </script>
-            </select>
-            <input type="text" name="phone" id="phone" onblur="configNumber(this)" required>
-            <br>
-            <textarea name="text" id="msg" cols="20" rows="10"></textarea>
-            <input type="button" name="chrome" value="Google Chrome" onclick="send(this.name)">
-            <input type="button" name="firefox" value="Mozila Firefox" onclick="send(this.name)">
+        <form class="container">
+            <h1 class="center">Chat Whatsapp</h1>
+            <div class="phone div-phone">
+                <select name="DDD" id="ddd" class="font">
+                    <option value="84">84</option>
+                    <option value="">-----</option>
+                    <script>
+                        //adicionando DDDs dinamicamente
+                        const sel = document.getElementById('ddd')
+                        let ddd = []
+                        for (let i = 11; i < 100; i++) {
+                            ddd.push(i) // adicionados ao array
+                        }
+                        ddd.forEach( (opt) => { // varre todos os itens do ddd
+                            option = new Option(opt, opt, (opt==84)) // value, text, selected
+                            sel.options[sel.options.length] = option
+                        })
+                    </script>
+                </select>
+                <input type="text" name="phone" id="phone" 
+                    class="phone font" onkeyup="configNumber(this)"
+                    placeholder="9 9999-9999">
+            </div>
+            <textarea name="text" id="msg" class="font"
+                cols="20" rows="6" placeholder="Envie uma mensagem..."></textarea>
+                <label for="send" class="font center">
+                    Selecione o navegador
+                </label>
+            <div id="send">
+                <input type="image" src="./_img/chrome.png" name="chrome" value="Google Chrome" onclick="send(this.name)">
+                <input type="image" src="./_img/firefox.png" name="firefox" value="Mozila Firefox" onclick="send(this.name)">
+            </div>
         </form>
 
         <script src="../main.js"></script>
