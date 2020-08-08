@@ -1,6 +1,11 @@
+body {
+    /*border: 1px solid black;*/
+    padding-top: 5px;
+}
 .container{
     max-width: 285px;
     margin: auto;
+    margin: 5px 10px;
 }
 form {
     display: flex;
@@ -11,6 +16,9 @@ form > * {
 }
 .font {
     font-size: 23px;
+}
+h1 {
+    font-size: 35px;
 }
 .div-phone {
     height: 50px;
@@ -40,5 +48,13 @@ form > * {
     display: flex;
     flex-direction: line;
     justify-content: space-around;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    border-top: 1px solid #000000;
+    padding-top: 5px;
+    color: #9c9c9c;
 }
 

@@ -5,7 +5,7 @@ const open = require('open')
 function createWindow () {
     let win = new BrowserWindow({
         width: 285, // 285
-        height: 520, // 520
+        height: 475, // 485
         webPreferences: {
             nodeIntegration: true
         }

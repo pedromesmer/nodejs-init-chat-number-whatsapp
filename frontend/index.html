@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Pagina inicial</title>
+        <!--
+        -->
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body onKeyDown="enter()">
@@ -39,6 +42,10 @@
                 <input type="image" src="./_img/chrome.png" name="chrome" value="Google Chrome" onclick="send(this.name)">
                 <input type="image" src="./_img/firefox.png" name="firefox" value="Mozila Firefox" onclick="send(this.name)">
             </div>
+            <footer>
+                <span id="version">v1.0.0</span>
+                <span id="about">Desenvolvido por Pedro Mesmer</span>
+            </footer>
         </form>
 
         <script src="../main.js"></script>
