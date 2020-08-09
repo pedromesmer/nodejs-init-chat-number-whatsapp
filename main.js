@@ -6,12 +6,15 @@ function createWindow () {
     let win = new BrowserWindow({
         width: 285, // 285
         height: 475, // 485
+        icon: 'frontend/_img/icon.png',
         webPreferences: {
             nodeIntegration: true
         }
     })
+    win.setIcon('frontend/_img/icon.png')
     win.setMenuBarVisibility(false)
     win.loadFile('frontend/index.html')
+
 }
 
 app.whenReady().then(createWindow)
